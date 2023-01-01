@@ -284,6 +284,7 @@ a {
 
   .section3 {
     height: 60rem;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -298,9 +299,12 @@ a {
     margin: auto;
     height: 45rem;
     grid-template-columns: 20rem 20rem;
-    grid-gap: 5rem;
     align-items: center;
     justify-content: center;
+  }
+
+  .projectsContainer a {
+    margin: auto;
   }
 
   .section4__content {
