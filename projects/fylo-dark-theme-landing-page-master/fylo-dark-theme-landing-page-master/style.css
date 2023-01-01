@@ -1,0 +1,551 @@
+:root {
+  /* Font Family */
+  --font-family-base: 'Open Sans', sans-serif;
+  --font-family-accent: 'Raleway', sans-serif;
+
+  /* Primary Colors */
+  --primary-color1: hsl(217, 28%, 15%); /* intro and email sign up background */
+  --primary-color2: hsl(218, 28%, 13%); /* main background */
+  --primary-color3: hsl(216, 53%, 9%); /* footer background */
+  --primary-color4: hsl(219, 30%, 18%); /* testimonials background */
+
+  /* Accent Colors */
+  --accent-color1: hsl(176, 68%, 64%);
+  --accent-color2: hsl(198, 60%, 50%);
+  --accent-color3: hsl(0, 100%, 63%);
+
+  /* Neutral Colors */
+  --neutral-color-1: hsl(0, 0%, 100%);
+
+  /* Font Sizes */
+  --font-size400: 0.875rem;
+
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  color: var(--neutral-color-1);
+  background-color: var(--primary-color2);
+  font-size: var(--font-size400);
+  font-family: var(--font-family-base);
+}
+
+header {
+  background-color: var(--primary-color1);
+  background-image: url(images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+}
+
+a {
+  color: var(--neutral-color-1);
+  text-decoration: none;
+}
+
+.headerNav a:hover {
+  text-decoration: underline;
+}
+
+.section1 a {
+  background-image: linear-gradient(to right, var(--accent-color1), var(--accent-color2));
+  padding: 0.5rem 5rem;
+  border-radius: 20px;
+}
+
+.section1 a:hover {
+  background-color: var(--accent-color1);
+  background-image: none;
+}
+
+.section3 a {
+  color: var(--accent-color1);
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+}
+
+.section4Content {
+  background-color: var(--primary-color4);
+}
+
+.clientContent img {
+  border-radius: 50%;
+}
+
+.earlyAccess {
+  background-color: var(--primary-color1);
+}
+
+input[type=submit] {
+  border: none;
+  border-radius: 20px;
+  color: var(--neutral-color-1);
+  background-image: linear-gradient(to right, var(--accent-color1), var(--accent-color2));
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+  color: var(--neutral-color-1);
+  background-image: none;
+  background-color: var(--accent-color1);
+}
+
+input[type=email] {
+  border: none;
+  border-radius: 20px;
+}
+
+footer {
+  background-color: var(--primary-color3);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-family-accent);
+}
+
+
+
+@media screen and (min-width: 320px) {
+  nav {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+  }
+
+  .logo {
+    height: 2rem;
+  }
+
+  .headerNav {
+    display: flex;
+  }
+
+  .headerNav li {
+    padding: 0.5rem;
+  }
+
+  main {
+    height: 180rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .section1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 35rem;
+  }
+
+  .section1 img {
+    width: 80%;
+    margin: auto;
+  }
+
+  .section1 p {
+    width: 90%;
+    margin: auto;
+  }
+
+  .section1 a {
+    width: 15rem;
+    margin: auto;
+  }
+
+  .section2 {
+    height: 65rem;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .section2Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 19rem;
+    margin: auto;
+  }
+
+  .section2Content img {
+    margin: 0 auto;
+  }
+
+  .section3 {
+    width: 90%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .section4 {
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    margin-bottom: 15rem;
+  }
+
+  .section4Content {
+    width: 90%;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+  }
+
+  .clientTestimonial {
+    margin-bottom: 1rem;
+  }
+
+  .clientContent img {
+    height: 2rem;
+    margin-right: 1rem;
+  }
+
+  .clientContent {
+    display: flex;
+    align-items: center;
+  }
+
+  .earlyAccess {
+    position: absolute;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+    height: 19rem;
+    width: 90%;
+    left: 5%;
+    bottom: -30rem;
+  }
+
+  .earlyAccess h2 {
+    padding: 1.5rem 0 1rem 0;
+  }
+
+  .earlyAccess p {
+    padding: 0 1rem;
+  }
+
+  input[type=email] {
+    margin: 1rem 0;
+  }
+
+  input[type=submit],
+  input[type=email] {
+    width: 70%;
+    padding: 0.5rem 0 0.5rem 1rem;
+  }
+
+  footer {
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .primaryNav {
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80%;
+  }
+
+  .location,
+  .phone,
+  .contact {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .location img {
+    margin-right: 1.5rem;
+  }
+
+  .phone img,
+  .contact img { 
+    margin-right: 1rem;
+  }
+
+  .subNav li {
+    padding: 0.5rem 0;
+  }
+
+  .lastNav {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 375px) {
+
+  nav {
+    width: 90%;
+  }
+
+  .section1 {
+    width: 22rem;
+    margin: 0 auto;
+  }
+
+  .section3 {
+    width: 21.5rem;
+  }
+
+  .section3Content {
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .section4Content {
+    width: 21rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  main {
+    height: 120rem;
+  }
+
+  header {
+    background-image: url(images/bg-curvy-desktop.svg);
+  }
+
+  .section1 {
+    height: 40rem;
+    width: 30rem;
+  }
+
+  .section1 img {
+    width: 100%;
+  }
+
+  .section2 {
+    height: 40rem;
+    column-gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+
+  .section2Content {
+    width: 22rem;
+  }
+
+  .section3 {
+    width: 90%;
+    height: 25rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .section3Hero {
+    width: 50%;
+  }
+
+  .section3Content {
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto 2rem;
+  }
+
+  .section3Content h2 {
+    font-size: 3rem;
+  }
+
+  .section4 {
+    height: 25rem;
+    width: 95%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .section4Content {
+    width: 18rem;
+  }
+
+  .clientContent img {
+    height: 2rem;
+  }
+
+  .earlyAccess {
+    height: 15rem;
+    bottom: -15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .earlyAccess h2 {
+    font-size: 2rem;
+  }
+
+  .earlyAccess p {
+    width: 42rem;
+    margin: auto;
+  }
+
+  .formInputs {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto auto 1rem auto;
+  }
+
+  input[type=email] {
+    width: 30rem;
+    margin-right: 2rem;
+  }
+
+  input[type=submit] {
+    margin: 1rem auto;
+    width: 15rem;
+  }
+
+  footer {
+    height: 27rem;
+  }
+
+  .footerLogo {
+    margin-bottom: 2rem;
+  }  
+
+  .primaryNav {
+    height: 10rem;
+    flex-direction: row;
+    width: 95%;
+  }
+
+  .location {
+    width: 21rem;
+  }
+
+  .lastNav {
+    width: 7.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    height: 140rem;
+  }
+
+  .section3 {
+    width: 80%;
+  }
+
+  .section4 {
+    width: 80%;
+  }
+
+  .section4Content {
+    width: 21rem;
+  }
+
+  .earlyAccess {
+    bottom: -18rem;
+  }
+
+  footer {
+    height: 30rem;
+  }
+
+  .primaryNav {
+    width: 90%;
+  }
+}
