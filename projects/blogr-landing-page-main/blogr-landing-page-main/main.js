@@ -11,61 +11,79 @@ function closeMenu() {
 }
 
 function displayMenuContent0() {
-  document.getElementsByClassName("menuContent")[0].style.display = "block";
-  document.getElementsByClassName("menuContent")[1].style.display = "none";
-  document.getElementsByClassName("menuContent")[2].style.display = "none";
 
-  document.getElementsByClassName("showMenuContent")[0].style.display = "none";
-  document.getElementsByClassName("showMenuContent")[1].style.display = "block";
-  document.getElementsByClassName("showMenuContent")[2].style.display = "block";
+  const menuContent = document.getElementsByClassName("menuContent");
+  const hideMenuContent = document.getElementsByClassName("hideMenuContent");
+  const showMenuContent = document.getElementsByClassName("showMenuContent");
 
-  document.getElementsByClassName("hideMenuContent")[0].style.display = "block";
-  document.getElementsByClassName("hideMenuContent")[1].style.display = "none";
-  document.getElementsByClassName("hideMenuContent")[2].style.display = "none";
+  if (menuContent[0].style.display == "none") {
+
+    menuContent[0].style.display = "block";
+    menuContent[1].style.display = "none";
+    menuContent[2].style.display = "none";
+
+    showMenuContent[0].style.display = "none";
+    showMenuContent[1].style.display = "block";
+    showMenuContent[2].style.display = "block";
+
+    hideMenuContent[0].style.display = "block";
+    hideMenuContent[1].style.display = "none";
+    hideMenuContent[2].style.display = "none";
+  } else {
+    menuContent[0].style.display = "none";
+    showMenuContent[0].style.display = "block";
+    hideMenuContent[0].style.display = "none";
+  }
 }
 
 function displayMenuContent1() {
-  document.getElementsByClassName("menuContent")[0].style.display = "none";
-  document.getElementsByClassName("menuContent")[1].style.display = "block";
-  document.getElementsByClassName("menuContent")[2].style.display = "none";
 
-  document.getElementsByClassName("showMenuContent")[0].style.display = "block";
-  document.getElementsByClassName("showMenuContent")[1].style.display = "none";
-  document.getElementsByClassName("showMenuContent")[2].style.display = "block";
+  const menuContent = document.getElementsByClassName("menuContent");
+  const hideMenuContent = document.getElementsByClassName("hideMenuContent");
+  const showMenuContent = document.getElementsByClassName("showMenuContent");
 
-  document.getElementsByClassName("hideMenuContent")[0].style.display = "none";
-  document.getElementsByClassName("hideMenuContent")[1].style.display = "block";
-  document.getElementsByClassName("hideMenuContent")[2].style.display = "none";
+  if (menuContent[1].style.display == "none") {
+
+    menuContent[0].style.display = "none";
+    menuContent[1].style.display = "block";
+    menuContent[2].style.display = "none";
+
+    showMenuContent[0].style.display = "block";
+    showMenuContent[1].style.display = "none";
+    showMenuContent[2].style.display = "block";
+
+    hideMenuContent[0].style.display = "none";
+    hideMenuContent[1].style.display = "block";
+    hideMenuContent[2].style.display = "none";
+  } else {
+    menuContent[1].style.display = "none";
+    showMenuContent[1].style.display = "block";
+    hideMenuContent[1].style.display = "none";
+  }
 }
 
 function displayMenuContent2() {
-  document.getElementsByClassName("menuContent")[0].style.display = "none";
-  document.getElementsByClassName("menuContent")[1].style.display = "none";
-  document.getElementsByClassName("menuContent")[2].style.display = "block";
 
-  document.getElementsByClassName("showMenuContent")[0].style.display = "block";
-  document.getElementsByClassName("showMenuContent")[1].style.display = "block";
-  document.getElementsByClassName("showMenuContent")[2].style.display = "none";
+  const menuContent = document.getElementsByClassName("menuContent");
+  const hideMenuContent = document.getElementsByClassName("hideMenuContent");
+  const showMenuContent = document.getElementsByClassName("showMenuContent");
 
-  document.getElementsByClassName("hideMenuContent")[0].style.display = "none";
-  document.getElementsByClassName("hideMenuContent")[1].style.display = "none";
-  document.getElementsByClassName("hideMenuContent")[2].style.display = "block";
-}
+  if (menuContent[2].style.display == "none") {
 
-function hideMenuContent0() {
-  document.getElementsByClassName("menuContent")[0].style.display = "none";
-  document.getElementsByClassName("showMenuContent")[0].style.display = "block";
-  document.getElementsByClassName("hideMenuContent")[0].style.display = "none";
-}
-
-function hideMenuContent1() {
-  document.getElementsByClassName("menuContent")[1].style.display = "none";
-  document.getElementsByClassName("showMenuContent")[1].style.display = "block";
-  document.getElementsByClassName("hideMenuContent")[1].style.display = "none";
-}
-
-function hideMenuContent2() {
-  document.getElementsByClassName("menuContent")[2].style.display = "none";
-  document.getElementsByClassName("showMenuContent")[2].style.display = "block";
-  document.getElementsByClassName("hideMenuContent")[2].style.display = "none";
+    menuContent[0].style.display = "none";
+    menuContent[1].style.display = "none";
+    menuContent[2].style.display = "block";
+  
+    showMenuContent[0].style.display = "block";
+    showMenuContent[1].style.display = "block";
+    showMenuContent[2].style.display = "none";
+  
+    hideMenuContent[0].style.display = "none";
+    hideMenuContent[1].style.display = "none";
+    hideMenuContent[2].style.display = "block";
+  } else {
+    menuContent[2].style.display = "none";
+    showMenuContent[2].style.display = "block";
+    hideMenuContent[2].style.display = "none";
+  }
 }

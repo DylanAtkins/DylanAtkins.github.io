@@ -47,6 +47,8 @@ dd {
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Set core root defaults */
@@ -198,6 +200,10 @@ a {
     justify-content: space-evenly;
   }
 
+  .section3 > p {
+    text-align: center;
+  }
+
   .section3 a {
     height: 16rem;
     width: 16rem;
@@ -228,6 +234,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin: auto;
   }
 
   .whatsapp {
@@ -307,9 +314,6 @@ a {
     margin: auto;
   }
 
-  .section4__content {
-    margin: auto;
-  }
 }
 
 @media screen and (min-width: 1440px) {

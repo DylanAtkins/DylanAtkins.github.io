@@ -636,7 +636,7 @@ footer {
   .section1__subTitle {
     width: 100%;
     text-align: left;
-    margin: 0 auto 0 3rem;
+    margin-left: 3rem;
   }
 
   .section1Content p {
