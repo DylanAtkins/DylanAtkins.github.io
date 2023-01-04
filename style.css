@@ -194,7 +194,7 @@ a {
   }
 
   .section3 {
-    height: 100rem;
+    height: 110rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
