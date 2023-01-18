@@ -99,10 +99,11 @@ select {
   }
 }
 
-body {
+html {
   color: var(--primary-color1);
   background-color: hsl(0, 0%, 8%);
   font-family: var(--font-family-base);
+  scroll-behavior: smooth;
 }
 
 a {
